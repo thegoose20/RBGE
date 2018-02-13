@@ -1,0 +1,19 @@
+﻿name,parent
+Plantae,
+Anthrocerotophyta,Plantae
+Byrophyta,Plantae
+Charophyta,Plantae
+Chlorophyta,Plantae
+Glaucophyta,Plantae
+Marchantiophyta,Plantae
+Rhodophyta,Plantae
+Tracheophyta,Plantae
+Anthocerotopsida,Anthrocerotophyta
+Leiosporocerotopsida,Anthocerotopsida
+Leiosporocerotales,Leiosporocerotopsida
+Leiosporocerotaceae,Leiosporocerotales
+Leiosporoceros,Leiosporocerotaceae
+Leiosporoceros dussii,Leiosporoceros
+Andreaeopsida,Byrophyta
+Byropsida,Byrophyta
+Sphagnopsida,Byrophyta
