@@ -1,0 +1,210 @@
+name,parent
+Plantae,
+Tracheophyta,Plantae
+Bryophyta,Plantae
+Marchantiophyta,Plantae
+Magnoliopsida,Tracheophyta
+Liliopsida,Tracheophyta
+Sphagnopsida,Bryophyta
+Jungermanniopsida,Marchantiophyta
+Bryopsida,Bryophyta
+Polypodiopsida,Tracheophyta
+Saxifragales,Magnoliopsida
+Ranunculales,Magnoliopsida
+Ericales,Magnoliopsida
+Alismatales,Liliopsida
+Poales,Liliopsida
+Lamiales,Magnoliopsida
+Oxalidales,Magnoliopsida
+Gentianales,Magnoliopsida
+Caryophyllales,Magnoliopsida
+Asparagales,Liliopsida
+Sphagnales,Sphagnopsida
+Fabales,Magnoliopsida
+Sapindales,Magnoliopsida
+Rosales,Magnoliopsida
+Jungermanniales,Jungermanniopsida
+Polytrichales,Bryopsida
+Polypodiales,Polypodiopsida
+Apiales,Magnoliopsida
+Malpighiales,Magnoliopsida
+Myrtales,Magnoliopsida
+Laurales,Magnoliopsida
+Aquifoliales,Magnoliopsida
+Piperales,Magnoliopsida
+Malvales,Magnoliopsida
+Asterales,Magnoliopsida
+Fagales,Magnoliopsida
+Saxifragaceae,Saxifragales
+Ranunculaceae,Ranunculales
+Primulaceae,Ericales
+Tofieldiaceae,Alismatales
+Poaceae,Poales
+Lamiaceae,Lamiales
+Elaeocarpaceae,Oxalidales
+Gentianaceae,Gentianales
+Caryophyllaceae,Caryophyllales
+Orchidaceae,Asparagales
+Sphagnaceae,Sphagnales
+Fabaceae,Fabales
+Sapindaceae,Sapindales
+Ericaceae,Ericales
+Moraceae,Rosales
+Scapaniaceae,Jungermanniales
+Sapotaceae,Ericales
+Polytrichaceae,Polytrichales
+Apocynaceae,Gentianales
+Aspleniaceae,Polypodiales
+Apiaceae,Apiales
+Salicaceae,Malpighiales
+Loganiaceae,Gentianales
+Melastomataceae,Myrtales
+Myrtaceae,Myrtales
+Pentaphylacaceae,Ericales
+Lauraceae,Laurales
+Aquifoliaceae,Aquifoliales
+Euphorbiaceae,Malpighiales
+Pteridaceae,Polypodiales
+Piperaceae,Piperales
+Araliaceae,Apiales
+Meliaceae,Sapindales
+Cephaloziaceae,Jungermanniales
+Dipterocarpaceae,Malvales
+Asteraceae,Asterales
+Fagaceae,Fagales
+Micranthes,Saxifragaceae
+Caltha,Ranunculaceae
+Anemone,Ranunculaceae
+Saxifraga,Saxifragaceae
+Helleborus,Ranunculaceae
+Primula,Primulaceae
+Tofieldia,Tofieldiaceae
+Clematis,Ranunculaceae
+Themeda,Poaceae
+Anisomeles,Lamiaceae
+Elaeocarpus,Elaeocarpaceae
+Gentianella,Gentianaceae
+Stellaria,Caryophyllaceae
+Ophrys,Orchidaceae
+Sphagnum,Sphagnaceae
+Astragalus,Fabaceae
+Cupaniopsis,Sapindaceae
+Conandrium,Primulaceae
+Scleranthus,Caryophyllaceae
+Lotus,Fabaceae
+Hypopitys,Ericaceae
+Parartocarpus,Moraceae
+Pyrola,Ericaceae
+Scapania,Scapaniaceae
+Planchonella,Sapotaceae
+Polytrichum,Polytrichaceae
+Marsdenia,Apocynaceae
+Asplenium,Aspleniaceae
+Ferulago,Apiaceae
+Casearia,Salicaceae
+Strychnos,Loganiaceae
+Hymenasplenium,Aspleniaceae
+Creochiton,Melastomataceae
+Syzygium,Myrtaceae
+Adinandra,Pentaphylacaceae
+Cryptocarya,Lauraceae
+Pleurospermum,Apiaceae
+Ilex,Aquifoliaceae
+Astronia,Melastomataceae
+Cinnamomum,Lauraceae
+Macaranga,Euphorbiaceae
+Lindsayomyrtus,Myrtaceae
+Ochrosia,Apocynaceae
+Adiantum,Pteridaceae
+Ficus,Moraceae
+Fagraea,Gentianaceae
+Sloanea,Elaeocarpaceae
+Piper,Piperaceae
+Polyscias,Araliaceae
+Acalypha,Euphorbiaceae
+Dysoxylum,Meliaceae
+Cephalozia,Cephaloziaceae
+Silene,Caryophyllaceae
+Anisoptera,Dipterocarpaceae
+Lithocarpus,Fagaceae
+Rhododendron,Ericaceae
+Endiandra,Lauraceae
+Micranthes engleri,Micranthes
+Micranthes stellaris,Micranthes
+Caltha palustris,Caltha
+Anemone nemorosa,Anemone
+Saxifraga aizoides,Saxifraga
+Helleborus viridis,Helleborus
+Primula acaulis,Primula
+Tofieldia pusilla,Tofieldia
+Clematis smilacifolia,Clematis
+Clematis graveolens,Clematis
+Themeda quadrivalvis,Themeda
+Themeda triandra,Themeda
+Themeda anathera,Themeda
+Themeda arguens,Themeda
+Clematis grata,Clematis
+Anisomeles indica,Anisomeles
+Anisomeles malabarica,Anisomeles
+Elaeocarpus culminicola,Elaeocarpus
+Gentianella campestris,Gentianella
+Stellaria palustris,Stellaria
+Ophrys sphegodes,Ophrys
+Sphagnum palustre,Sphagnum
+Saxifraga hypnoides,Saxifraga
+Astragalus danicus,Astragalus
+Cupaniopsis curvidens,Cupaniopsis
+Conandrium polyanthum,Conandrium
+Scleranthus annuus,Scleranthus
+Lotus gebelia,Lotus
+Hypopitys monotropa,Hypopitys
+Parartocarpus venenosa,Parartocarpus
+Pyrola media,Pyrola
+Scapania gracilis,Scapania
+Planchonella forbesii,Planchonella
+Sphagnum papillosum,Sphagnum
+Polytrichum jensenii,Polytrichum
+Marsdenia lorea,Marsdenia
+Asplenium trichomanes,Asplenium
+Ferulago trachycarpa,Ferulago
+Casearia grewiifolia,Casearia
+Strychnos colubrina,Strychnos
+Hymenasplenium unilaterale,Hymenasplenium
+Creochiton novoguineensis,Creochiton
+Syzygium fastigiatum,Syzygium
+Adinandra forbesii,Adinandra
+Cryptocarya myrcioides,Cryptocarya
+Pleurospermum candollei,Pleurospermum
+Ilex forbesii,Ilex
+Astronia arborea,Astronia
+Cinnamomum bejolghota,Cinnamomum
+Macaranga polyadenia,Macaranga
+Asplenium auriculatum,Asplenium
+Lindsayomyrtus racemoides,Lindsayomyrtus
+Ochrosia ficifolia,Ochrosia
+Adiantum edgeworthii,Adiantum
+Ficus rhizophoriphylla,Ficus
+Ficus trachypison,Ficus
+Fagraea gracilipes,Fagraea
+Sloanea sogerensis,Sloanea
+Asplenium cristatum,Asplenium
+Asplenium sarelii,Asplenium
+Piper obesispicum,Piper
+Polyscias ledermannii,Polyscias
+Sphagnum capillifolium,Sphagnum
+Acalypha longispica,Acalypha
+Dysoxylum variabile,Dysoxylum
+Macaranga involucrata,Macaranga
+Cephalozia affinis,Cephalozia
+Ficus edelfeltii,Ficus
+Asplenium ensiforme,Asplenium
+Ficus casearioides,Ficus
+Adiantum terminatum,Adiantum
+Silene tibetica,Silene
+Adiantum philippense,Adiantum
+Anisoptera thurifera,Anisoptera
+Lithocarpus sogerensis,Lithocarpus
+Syzygium sogerense,Syzygium
+Rhododendron principis,Rhododendron
+Endiandra forbesii,Endiandra
+Ficus pantoniana,Ficus

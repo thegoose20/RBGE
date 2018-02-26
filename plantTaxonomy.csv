@@ -1,4 +1,4 @@
-﻿name,parent
+name,parent
 Plantae,
 Anthrocerotophyta,Plantae
 Byrophyta,Plantae
@@ -13,7 +13,7 @@ Leiosporocerotopsida,Anthocerotopsida
 Leiosporocerotales,Leiosporocerotopsida
 Leiosporocerotaceae,Leiosporocerotales
 Leiosporoceros,Leiosporocerotaceae
-Leiosporoceros dussii,Leiosporoceros
+Leiosporoceros dussii (Steph.) Hassel,Leiosporoceros
 Andreaeopsida,Byrophyta
 Byropsida,Byrophyta
 Sphagnopsida,Byrophyta
