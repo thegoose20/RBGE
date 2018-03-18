@@ -3,6 +3,10 @@
 <body>
 <style>
 
+svg {
+  font: 10px sans-serif;
+}
+
 .node circle {
   fill: #999;
 }
@@ -27,9 +31,13 @@
 }
 
 </style>
-<h1>Taxonomic Categories in the RBGE's First 100 Years of Plants</h1>
+<h1>Taxonomic History of the Royal Botanic Gardens of Edinburgh</h1>
+<p id="diagram">
+<aside> Source: <a href="https://www.gbif.org/" target="_blank">GBIF</a></aside>
+<p id="menu><b>Plants in the Royal Botanic Gardens of Edinburgh, 1690-2017"</b>Years: <select</select>
 <script src="d3/d3.js"></script>
 <script>
+
 // set diagram's dimensions & margins
 var margin = {top: 20, right: 200, bottom: 20, left: 100},
     width = 2200 - margin.left - margin.right,
@@ -39,8 +47,13 @@ var margin = {top: 20, right: 200, bottom: 20, left: 100},
 var treemap = d3.tree()
 .size([height, width]);
 
+var dataFile = "taxonomy.csv";
+
+var menu = d3.select("#menu select")
+  .on("change", change);
+
 // load csv file of data
-d3.csv("taxonomy.csv", function(error, flatData) {
+d3.csv(dataFile, function(error, flatData) {  //"taxonomy.csv" instead of dataFile
   if (error) throw error;
 
   // correctly assign null
@@ -69,17 +82,47 @@ d3.csv("taxonomy.csv", function(error, flatData) {
 
     // append svg object to page's body
     // (appends 'group' element to 'svg' & moves 'group' element to top left margin)
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#diagram").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom),
     g = svg.append("g")
       .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")" );
 
+      var phyla = d3.keys(flatData[0]).filter(function(key) { // really should be years
+        return key != "Bryophyta" && key != "Marchantiophyta";
+      });
+
+    // create menu to select data
+    menu.selectAll("option")
+      .data(phyla)
+    .enter().append("option")
+      .text(function(d) {return d; });
+
+    menu.property("name", "Tracheophyta");  // really should be time periods (e.g. 1796-1890)
+
+    //redraw();
+});
+
+function change() {
+  clearTimeout(timeout);
+
+  d3.transition()
+      //.duration(750)
+      //.each(redraw);
+      selectData = d3.csv(function(d, dataFile) {
+        return dataFile ? "taxonomy.csv" : "plantTaxonomy.csv"
+      });
+}
+
+function redraw() {
+  var phylum1 = menu.property("name"),
+    top = name;  // or phyla[0][0]???
+
     // add links between nodes
     var link = g.selectAll(".link")
       .data(nodes.descendants().slice(1))
-      .enter().append("path")
+    var linkEnter = link.enter().append("path")
       .attr("class", "link")
       .attr("d", function(d) {
         return "M" + d.y + "," + d.x
@@ -88,28 +131,76 @@ d3.csv("taxonomy.csv", function(error, flatData) {
         + " " + d.parent.y + "," + d.parent.x;
       });
 
-      // adds each node as a group
+    // adds each node as a group
     var node = g.selectAll(".node")
       .data(nodes.descendants())
-      .enter().append("g")
+    var nodeEnter = node.enter().append("g")
       .attr("class", function(d) {
         return "node" +
-        (d.children ? " node--internal" : " node--leaf"); })
+        (d.children ? " node--internal" : " node--leaf"); }) // ? is a ternary (conditional) operator (an inline "if" statement)
       .attr("transform", function(d) {
         return "translate(" + d.y + "," + d.x + ")"; });
-
     // adds the circle to the node
-    node.append("circle")
+    nodeEnter.append("circle")
       .attr("r", 10);
-
     // adds the text to the node
-    node.append("text")
+    nodeEnter.append("text")
       .attr("dy", ".35em")
       .attr("x", function(d) { return d.children ? -13 : 13; })
       .style("text-anchor", function(d) {
-      return d.children ? "end" : "start"; })
+        return d.children ? "end" : "start"; })
       .text(function(d) { return d.data.name; });
-});
+
+    var linkUpdate = d3.transition(link)
+      .style("fill-opacity", 1); // highest opacity possible
+    linkUpdate.select("path")
+      .style("fill-opacity", 1);
+    linkUpdate.select(".link")
+      .attr("d", function(d) {
+        return "M" + d.y + "," + d.x
+        + "C" + (d.y + d.parent.y) / 2 + "," + d.x
+        + " " + (d.y + d.parent.y) / 2 + "," + d.parent.x
+        + " " + d.parent.y + "," + d.parent.x;
+      });
+
+    var nodeUpdate = d3.transition(node)
+      .style("fill-opacity", 1);
+    nodeUpdate.select("circle")
+      .attr("r", 10)
+      .style("fill-opacity", 1);
+    nodeUpdate.select("text")
+      .attr("dy", ".35em")
+      .attr("x", function(d) { return d.children ? -13 : 13; })
+      .style("text-anchor", function(d) {
+        return d.children ? "end" : "start"; })
+      .text(function(d) { return d.data.name; });
+
+    var linkExit = d3.transition(link.exit())
+      .style("fill-opacity", 0)
+      .remove();
+    linkExit.select("path")
+      .style("fill-opacity", 0)
+      .remove();
+    linkExit.select(".link")
+      .style("fill-opacity", 0)
+      .remove();
+
+    var nodeExit = d3.transition(node.exit())
+      .style("fill-opacity", 0)
+      .remove();
+    nodeExit.select("circle")
+      .style("fill-opacity", 0)
+      .remove();
+    nodeExit.select("text")
+      .style("fill-opacity", 0)
+      .remove();
+}
+
+var timeout = setTimeout(function() {
+  menu.property("name", "Marchantiophyta").node().focus();
+  change();
+}, 5000);
+
 
 </script>
 </body>

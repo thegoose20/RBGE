@@ -44,7 +44,7 @@ var stratify = d3.stratify()
     .id(function(d) {return d.name; })
     .parentId(function(d) {return d.parent; });
 
-var table = d3.csv("plantTaxonomy.csv", function(error, data) {
+var table = d3.csv("taxonomy.csv", function(error, data) {
   if (error) throw error;
 
   var root = stratify(data);
