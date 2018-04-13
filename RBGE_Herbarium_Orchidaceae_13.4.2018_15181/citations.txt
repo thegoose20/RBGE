@@ -1,3 +1,0 @@
-Please cite this data as follows, and pay attention to the rights documented in the rights.txt:
-Please respect the rights declared for each dataset in the download: 
-Royal Botanic Garden Edinburgh (2018). Royal Botanic Garden Edinburgh Herbarium (E). Occurrence Dataset https://doi.org/10.15468/ypoair accessed via GBIF.org on 2018-04-13. 10.15468/ypoair
